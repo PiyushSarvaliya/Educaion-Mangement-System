@@ -64,8 +64,5 @@ Education Management System Backend API
   - Average Grade per Course: Aggregation queries are used to calculate the average grade of students per course.
   - Number of Enrolled Students: Aggregation to count the number of students enrolled in each course.
  
-- Author
-  - Vraj Lukhi – Backend Developer
- 
 - Conclusion
   - The Education Management System Backend API offers a secure, scalable solution for managing users, courses, enrollments, assignments, and grades. Built with Node.js, Express, and MongoDB, it provides role-based access control and course analytics, making it an ideal tool for educational institutions. With potential for further enhancements like real-time notifications, it’s a flexible foundation for efficient education management. Contributions are welcome to improve or extend the system for broader use cases.
