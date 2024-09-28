@@ -3,7 +3,7 @@ const { addCoures, updateCourse, deleteCourse, selfEnroll, submitAssignment, enr
 const { Auth, authorize, admin, student } = require("../middlewares/auth")
 const courseRoute = Router()
 
-courseRoute.post("/add" , authorize, addCoures)
+courseRoute.post("/add" , admin , addCoures)
 courseRoute.patch("/upadate/:id" , Auth , authorize , updateCourse)
 courseRoute.delete("/delete/:id", admin , deleteCourse)
 courseRoute.post("/self" , Auth ,  student , selfEnroll)

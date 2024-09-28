@@ -14,7 +14,7 @@ const addCoures = async (req, res) => {
 
 const updateCourse = async (req, res) => {
     try {
-      const course = await Course.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      const course = await Course.findByIdAndUpdate(req.params.id, req.body,  { new: true });
       if (!course) return res.status(404).json({ message: 'Course not found' });
       res.status(200).json(course);
     } catch (err) {
@@ -76,7 +76,8 @@ const updateCourse = async (req, res) => {
         course: courseId,
         fileUrl,
       });
-      
+      course.assignments.push(assignment._id)
+      await course.save()
       await assignment.save();
       res.status(201).json({ message: 'Assignment submitted successfully', assignment });
     } catch (err) {
